@@ -35,5 +35,21 @@ var swiper = new Swiper(".popular-content", {
       slidesPerView: 4,
       spaceBetween: 20,
     },
-  }
+  },
 });
+
+//Show Video
+let playButton = document.querySelector(".play-movie");
+let video = document.querySelector(".video-container");
+let myvideo = document.querySelector("#myvideo");
+let closeButton = document.querySelector(".close-video");
+
+playButton.onclick = () => {
+  video.classList.add("show-video");
+  myvideo.play()
+};
+
+closeButton.onclick = () => {
+  video.classList.remove("show-video");
+  myvideo.pause()
+}
